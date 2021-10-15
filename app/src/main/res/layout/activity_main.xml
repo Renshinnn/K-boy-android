@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:background="#FCFFA6">
+
+    //Menampilkan nama aplikasi 'Kalkulator'
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator"
+        android:textColor="#316B83"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="20sp"/>
+
+    //Menampilkan 'Masukkan angka pertama'
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150sp"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="Masukkan angka pertama"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+
+    //input angka pertama
+
+    <EditText
+        android:id="@+id/input_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:hint="Masukkan angka pertama"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:typeface="monospace" />
+
+    //Menampilkan 'Masukkan angka kedua'
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250sp"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="Masukkan angka kedua"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+
+    //input angka kedua
+
+    <EditText
+        android:id="@+id/input_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="285dp"
+        android:hint="Masukkan angka kedua"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:minHeight="48dp"
+        android:textSize="12sp"
+        android:typeface="monospace" />
+
+    //button
+    <LinearLayout
+        android:id="@+id/btn_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/input_2"
+        >
+
+        <Button
+            android:id="@+id/btn_tambah"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:onClick="tambah"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btn_kurang"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:onClick="kurang"
+            tools:ignore="OnClick"/>
+
+        <Button
+            android:id="@+id/btn_kali"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:onClick="kali"
+            tools:ignore="OnClick"/>
+
+        <Button
+            android:id="@+id/btn_bagi"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:onClick="bagi"
+            tools:ignore="OnClick"/>
+
+        <Button
+            android:id="@+id/btn_modulus"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:onClick="modulus"
+            tools:ignore="OnClick"/>
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="C"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#316B83"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="60sp"
+        android:layout_below="@+id/btn_operator"/>
+
+
+    <ImageView
+        android:id="@+id/img_wm"
+        android:layout_width="69dp"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/ic_asset_1" />
+
+
+
+
+</RelativeLayout>
